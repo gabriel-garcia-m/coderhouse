@@ -1,0 +1,132 @@
+#grilla {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "historia noticias telescopio"
+    "footer footer footer";
+  grid-template-rows: 100px 1fr 75px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+}
+.border {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  font-family: Roboto;
+}
+
+header {
+  grid-area: header;
+}
+footer {
+  grid-area: footer;
+  padding-top: 20px;
+}
+section#historia {
+  grid-area: historia;
+  text-align: center;
+  background-image: url("../img/history.jpg");
+}
+section#noticias {
+  grid-area: noticias;
+  text-align: center;
+  background-image: url("../img/news.jpg");
+}
+nav {
+  grid-area: nav;
+}
+aside {
+  grid-area: telescopio;
+  text-align: center;
+  background-image: url("../img/jw.jpg");
+}
+
+h1 {
+  font-family: Roboto;
+  font-weight: bolder;
+  font-stretch: extra-expanded;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  font-family: Roboto;
+  font-weight: lighter;
+  justify-content: end;
+}
+
+#grillaContenido {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav historia historia"
+    "footer footer footer";
+  grid-template-rows: 100px 1fr 75px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+}
+
+p {
+  text-align: justify;
+  padding: 15px;
+}
+
+section#historiaContenido {
+  grid-area: historia;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  #grillaContenido {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "historia historia historia"
+      "footer footer footer";
+    grid-template-rows: 100px 50px 1fr 75px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+  }
+
+  nav ul {
+    list-style: none;
+    display: inline-flex;
+    margin: 0%;
+  }
+
+  nav ul li {
+    padding: 10px;
+  }
+
+  #grilla {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "historia historia historia"
+      "noticias noticias noticias"
+      "telescopio telescopio telescopio"
+      "footer footer footer";
+    grid-template-rows: 100px 1fr 1fr 1fr 75px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+  }
+}
