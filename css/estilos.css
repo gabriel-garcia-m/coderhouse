@@ -27,7 +27,12 @@ footer {
 section#historia {
   grid-area: historia;
   text-align: center;
-  background-image: url("../img/history.jpg");
+  /*background-image: url("../img/history.jpg");*/
+  background-image: linear-gradient(
+    to left,
+    rgb(244, 238, 238),
+    rgb(128, 128, 123)
+  );
 }
 section#noticias {
   grid-area: noticias;
@@ -45,7 +50,9 @@ aside {
 
 h1 {
   font-family: Roboto;
-  font-weight: bolder;
+  font-weight: bold;
+  font-style: normal;
+  font-size: xx-large;
   font-stretch: extra-expanded;
 }
 
@@ -54,10 +61,29 @@ a {
   color: black;
 }
 
+a:focus {
+  background-color: rgb(165, 161, 161);
+}
+
 h2 {
   font-family: Roboto;
-  font-weight: lighter;
+  font-weight: bolder;
+  font-size: large;
   justify-content: end;
+  /*animaciones al texto h2*/
+  animation-duration: 2s;
+  animation-name: showw;
+  animation-iteration-count: infinite;
+}
+
+@keyframes showw {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
 }
 
 #grillaContenido {
@@ -129,4 +155,8 @@ nav ul {
     height: 100vh;
     margin: 0;
   }
+}
+
+main {
+  background-image: url(..//img/geometry.jpg);
 }
