@@ -1,34 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Realizo conexion para fuentes-Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Realizo conexion para fuentes-Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <!--Mando llamar hojas de estilos para animaciones-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!--Mando llamar hojas de estilos-->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <!--Mando llamar hojas de estilos de Bootstrap v5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--Mando llamar hojas de estilos para iconos en Bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!--Mando llamar mis hojas de estilos-->
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <title>OFTW</title>
+</head>
 
-    <!--Mando llamar hoja de estilos-->
-    <link rel="stylesheet" href="css/estilos.css" />
-    <title>Out of this WORLD...</title>
-  </head>
-  <body>
-    <main>
-      <div id="grilla">
-        <header class="border"><h1 class="animate__animated animate__bounce"><a href=index.html>Out of this WORLD.......{exploración espacial}</a></h1></header>
-        <section id="historia" class="border"><a href=historia.html><h2>Historia de la exploración espacial</h2></a></section>
-        <section id="noticias" class="border"><a href="noticias.html"><h2>Noticias</h2></a></section>
-        
-        <aside class="border"><a href="telescopio.html"><h2>Telescopio James Webb</h2></a></aside>
-        <footer class="border"><img alt="tt" src="img/sm.jpg"></footer>
+<body>
+  <header class="container-fluid border border-klight bg-secondary bg-opacity-50">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid" style="border: 20%;">
+        <a class="navbar-brand fs-1 text-wrap" href="index.html" aria-current="true">
+          <img src="img/logo.png" alt="logo_space" width="70" height="50" />
+          OUT OF THIS WORLD...{exploración espacial}
+        </a>
+        <!--
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>-->
+        <!--
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">OUT OF THIS WORLD...{exploración espacial}</a>
+              </li>
+
+            </ul>
+          </div>-->
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid">
+    <div class="row justify-content-center border border-light">
+      <div class="col-12 col-sd-6 col-lg-4 p-3 border bg-warning bg-gradient bg-opacity-75">
+        <h2>
+          Historia de la exploración espacial
+        </h2>
+        <p>
+
+          El Universo siempre ha fascinado a los seres humanos, que desde la Antigüedad soñaban con alcanzar mundos
+          diferentes al suyo. Algunos escritores y cineastas del siglo XIX y principios del XX como Julio Verne y George
+          Méliès abordaron el tema de la exploración espacial, pero no fue hasta mediados del siglo XX que este sueño se
+          materializó. Fuente: <a href="https://www.geoenciclopedia.com/exploracion-espacial/"
+            target="_blank">GeoEnciclopedia</a>
+          <br>
+
+          <a href="historia.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+            </svg> Ver más</a>
+        </p>
+      </div>
+      <div class="col-12 col-lg-4 p-3 border bg-warning bg-gradient bg-opacity-75">
+        <h2>
+          Noticias
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit dolorum libero ea culpa tempora. Voluptatum
+          totam laborum voluptas alias deleniti.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, et fuga accusantium quod officiis ad,
+          totam architecto pariatur consectetur ducimus minima sunt consequuntur nesciunt quo? Doloremque aut laboriosam
+          vero cupiditate!
+        </p>
+      </div>
+      <div class="col-12 col-lg-4 p-3 border bg-warning bg-gradient  bg-gradient bg-opacity-75">
+        <h2>
+          Telescopio espacial James Webb
+        </h2>
+  <p>The James Webb Space Telescope is the world’s largest, most powerful, and most complex space science telescope ever built. Webb will solve mysteries in our solar system, look beyond to distant worlds around other stars, and probe the mysterious structures and origins of our universe and our place in it. Webb is an international program led by NASA with its partners, ESA (European Space Agency) and the Canadian Space Agency. Fuente: <a href="https://blogs.nasa.gov/webb/"
+    target="_blank">James Webb Space Telescope</a>
+  <br>
+
+  <a href="https://blogs.nasa.gov/webb/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+      class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+    </svg> Ver más</a></p>
+       
         
       </div>
-    </main>
-  </body>
+      <div class="col-12 border bg-secondary bg-opacity-50">
+
+        <a href="https://twitter.com/gabrielgarciam" target="_blank"><i class="bi bi-twitter">Contacto</i></a>
+
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>
+
