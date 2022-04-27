@@ -1,0 +1,117 @@
+#grilla {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "historia noticias telescopio"
+      "footer footer footer";
+    grid-template-rows: 100px 1fr 75px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+  }
+  .border {
+    border: 1px solid $bordercolor;
+    border-radius: 8px;
+    font-family: $familiafuente;
+  }
+  
+
+  footer {
+    grid-area: footer;
+    padding-top: 20px;
+  }
+  section#historia {
+    grid-area: historia;
+    text-align: center;
+    /*background-image: url("../img/history.jpg");*/
+    background-image: linear-gradient(
+      to left,
+      rgb(244, 238, 238),
+      rgb(128, 128, 123)
+    );
+  }
+  section#noticias {
+    grid-area: noticias;
+    text-align: center;
+    background-image: url("../img/news.jpg");
+  }
+  nav {
+    grid-area: nav;
+
+    ul {
+      list-style: none;
+      display: inline-flex;
+      margin: 0%;
+      li {
+        padding: 10px;
+      }
+      }
+  }
+  aside {
+    grid-area: telescopio;
+    text-align: center;
+    background-image: url("../img/jw.jpg");
+  }
+  
+  h1 {
+    font-family: $familiafuente;
+    font-weight: bold;
+    font-style: normal;
+    font-size: xx-large;
+    font-stretch: extra-expanded;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: smaller;
+    &:focus {
+      background-color: rgb(165, 161, 161);
+    }
+  }
+  
+
+  
+  h2 {
+    font-family: $familiafuente;
+    font-weight: bolder;
+    font-size: large;
+    justify-content: end;
+    /*animaciones al texto h2*/
+    animation-duration: 2s;
+    animation-name: showw;
+    animation-iteration-count: infinite;
+  }
+
+  #grillaContenido {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "nav historia historia"
+      "footer footer footer";
+    grid-template-rows: 100px 1fr 75px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  p {
+    text-align: justify;
+    padding: 15px;
+  }
+  
+  section#historiaContenido {
+    grid-area: historia;
+    text-align: center;
+  }
+  
+
+
+  img{
+    align-self: auto;
+    padding: 2px;
+  }
