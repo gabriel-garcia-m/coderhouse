@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/*Declaración de map*/
+/*Utilización de map*/
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +8,26 @@
           box-sizing: border-box;
 }
 
+/*Declaración de variables globales*/
+/*Definición de clase h1 para extender*/
+.formatoH1, .h1_principal {
+  font-family: Roboto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: xx-large;
+}
+
+/*Definición de clase h2 para extender*/
+.formatoH2, .h2_principal {
+  font-family: Roboto;
+  font-weight: bolder;
+  font-size: large;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+/*Definición de mixin*/
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -85,11 +108,8 @@ aside {
   background-image: url("../img/jw.jpg");
 }
 
-h1 {
-  font-family: Roboto;
-  font-weight: bold;
-  font-style: normal;
-  font-size: xx-large;
+/*Utilización de h1 a través de extend*/
+.h1_principal {
   font-stretch: extra-expanded;
 }
 
@@ -103,13 +123,7 @@ a:focus {
   background-color: #a5a1a1;
 }
 
-h2 {
-  font-family: Roboto;
-  font-weight: bolder;
-  font-size: large;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+.h2_principal {
   /*animaciones al texto h2*/
   -webkit-animation-duration: 2s;
           animation-duration: 2s;

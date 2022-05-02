@@ -1,3 +1,5 @@
+
+/*Declaración de map*/
 $mapaDeEstilos:(
 valorCero: 0,
 boxS: border-box,
@@ -5,16 +7,41 @@ tam10Px: 10px,
 alinCentro: center
 );
 
+/*Utilización de map*/
 *{
     margin: map-get($mapaDeEstilos,valorCero);
     padding: map-get($mapaDeEstilos,valorCero);
     box-sizing: map-get($mapaDeEstilos, boxS);
   }
 
+/*Declaración de variables globales*/  
 $bordercolor: lightgray;
 $familiafuente: Roboto;
 
 
+
+/*Definición de clase h1 para extender*/
+.formatoH1{
+  font-family: $familiafuente;
+  font-weight: bold;
+  font-style: normal;
+  font-size: xx-large;
+}
+
+/*Definición de clase h2 para extender*/
+.formatoH2{
+  font-family: $familiafuente;
+  font-weight: bolder;
+  font-size: large;
+  justify-content: end;
+}
+
+/*Definición de mixin*/
+@mixin formatoBorde($tamano, $estilo, $color, $radio, $fuente) {
+  border: $tamano $estilo $color;
+  border-radius: $radio;
+  font-family: $fuente;
+}
 
 @import "header";
 @import "main";

@@ -12,9 +12,7 @@
     margin: 0;
   }
   .border {
-    border: 1px solid $bordercolor;
-    border-radius: 8px;
-    font-family: $familiafuente;
+    @include formatoBorde(1px, solid, $bordercolor, 8px, $familiafuente);
   }
   
 
@@ -55,11 +53,9 @@
     background-image: url("../img/jw.jpg");
   }
   
-  h1 {
-    font-family: $familiafuente;
-    font-weight: bold;
-    font-style: normal;
-    font-size: xx-large;
+  /*Utilización de h1 a través de extend*/
+  .h1_principal {
+    @extend .formatoH1;
     font-stretch: extra-expanded;
   }
   
@@ -74,11 +70,8 @@
   
 
   
-  h2 {
-    font-family: $familiafuente;
-    font-weight: bolder;
-    font-size: large;
-    justify-content: end;
+  .h2_principal {
+    @extend .formatoH2;
     /*animaciones al texto h2*/
     animation-duration: 2s;
     animation-name: showw;
