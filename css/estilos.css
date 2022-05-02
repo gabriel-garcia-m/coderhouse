@@ -1,130 +1,183 @@
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+}
+
+#grilla {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header" "historia noticias telescopio" "footer footer footer";
+  -ms-grid-rows: 100px 1fr 75px;
+      grid-template-rows: 100px 1fr 75px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+}
+
+.border {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  font-family: Roboto;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  padding-top: 20px;
+}
+
+section#historia {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: historia;
+  text-align: center;
+  /*background-image: url("../img/history.jpg");*/
+  background-image: -webkit-gradient(linear, right top, left top, from(#f4eeee), to(#80807b));
+  background-image: linear-gradient(to left, #f4eeee, #80807b);
+}
+
+section#noticias {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: noticias;
+  text-align: center;
+  background-image: url("../img/news.jpg");
+}
+
+nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0%;
+}
+
+nav ul li {
+  padding: 10px;
+}
+
+aside {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: telescopio;
+  text-align: center;
+  background-image: url("../img/jw.jpg");
+}
+
+h1 {
+  font-family: Roboto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: xx-large;
+  font-stretch: extra-expanded;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: smaller;
+}
+
+a:focus {
+  background-color: #a5a1a1;
+}
+
+h2 {
+  font-family: Roboto;
+  font-weight: bolder;
+  font-size: large;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  /*animaciones al texto h2*/
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: showw;
+          animation-name: showw;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#grillaContenido {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header" "nav historia historia" "footer footer footer";
+  -ms-grid-rows: 100px 1fr 75px;
+      grid-template-rows: 100px 1fr 75px;
+  -ms-grid-columns: 1fr 4fr 1fr;
+      grid-template-columns: 1fr 4fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+}
+
+p {
+  text-align: justify;
+  padding: 15px;
+}
+
+section#historiaContenido {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: historia;
+  text-align: center;
+}
+
+img {
+  -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
+  padding: 2px;
+}
+
+@-webkit-keyframes showw {
+  0% {
+    opacity: 0;
   }
-  
-  header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: header;
+  100% {
+    opacity: 1;
   }
-  
-  #grilla {
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "header header header" "historia noticias telescopio" "footer footer footer";
-    -ms-grid-rows: 100px 1fr 75px;
-        grid-template-rows: 100px 1fr 75px;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-    height: 100vh;
-    margin: 0;
+}
+
+@keyframes showw {
+  0% {
+    opacity: 0;
   }
-  
-  .border {
-    border: 1px solid lightgray;
-    border-radius: 8px;
-    font-family: Roboto;
+  100% {
+    opacity: 1;
   }
-  
-  footer {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: footer;
-    padding-top: 20px;
-  }
-  
-  section#historia {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-    grid-area: historia;
-    text-align: center;
-    /*background-image: url("../img/history.jpg");*/
-    background-image: -webkit-gradient(linear, right top, left top, from(#f4eeee), to(#80807b));
-    background-image: linear-gradient(to left, #f4eeee, #80807b);
-  }
-  
-  section#noticias {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: noticias;
-    text-align: center;
-    background-image: url("../img/news.jpg");
-  }
-  
-  nav {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: nav;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    margin: 0%;
-  }
-  
-  nav ul li {
-    padding: 10px;
-  }
-  
-  aside {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-    grid-area: telescopio;
-    text-align: center;
-    background-image: url("../img/jw.jpg");
-  }
-  
-  h1 {
-    font-family: Roboto;
-    font-weight: bold;
-    font-style: normal;
-    font-size: xx-large;
-    font-stretch: extra-expanded;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: smaller;
-  }
-  
-  a:focus {
-    background-color: #a5a1a1;
-  }
-  
-  h2 {
-    font-family: Roboto;
-    font-weight: bolder;
-    font-size: large;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    /*animaciones al texto h2*/
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-name: showw;
-            animation-name: showw;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-  }
-  
+}
+
+@media screen and (max-width: 768px) {
   #grillaContenido {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "header header header" "nav historia historia" "footer footer footer";
-    -ms-grid-rows: 100px 1fr 75px;
-        grid-template-rows: 100px 1fr 75px;
+        grid-template-areas: "header header header" "nav nav nav" "historia historia historia" "footer footer footer";
+    -ms-grid-rows: 100px 50px 1fr 75px;
+        grid-template-rows: 100px 50px 1fr 75px;
     -ms-grid-columns: 1fr 4fr 1fr;
         grid-template-columns: 1fr 4fr 1fr;
     grid-row-gap: 10px;
@@ -132,81 +185,28 @@
     height: 100vh;
     margin: 0;
   }
-  
-  p {
-    text-align: justify;
-    padding: 15px;
+  nav ul {
+    list-style: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 0%;
   }
-  
-  section#historiaContenido {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-    grid-area: historia;
-    text-align: center;
+  nav ul li {
+    padding: 10px;
   }
-  
-  img {
-    -ms-flex-item-align: auto;
-        -ms-grid-row-align: auto;
-        align-self: auto;
-    padding: 2px;
+  #grilla {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "header header header" "historia historia historia" "noticias noticias noticias" "telescopio telescopio telescopio" "footer footer footer";
+    -ms-grid-rows: 100px 1fr 1fr 1fr 75px;
+        grid-template-rows: 100px 1fr 1fr 1fr 75px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
   }
-  
-  @-webkit-keyframes showw {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes showw {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    #grillaContenido {
-      display: -ms-grid;
-      display: grid;
-          grid-template-areas: "header header header" "nav nav nav" "historia historia historia" "footer footer footer";
-      -ms-grid-rows: 100px 50px 1fr 75px;
-          grid-template-rows: 100px 50px 1fr 75px;
-      -ms-grid-columns: 1fr 4fr 1fr;
-          grid-template-columns: 1fr 4fr 1fr;
-      grid-row-gap: 10px;
-      grid-column-gap: 10px;
-      height: 100vh;
-      margin: 0;
-    }
-    nav ul {
-      list-style: none;
-      display: -webkit-inline-box;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      margin: 0%;
-    }
-    nav ul li {
-      padding: 10px;
-    }
-    #grilla {
-      display: -ms-grid;
-      display: grid;
-          grid-template-areas: "header header header" "historia historia historia" "noticias noticias noticias" "telescopio telescopio telescopio" "footer footer footer";
-      -ms-grid-rows: 100px 1fr 1fr 1fr 75px;
-          grid-template-rows: 100px 1fr 1fr 1fr 75px;
-      -ms-grid-columns: 1fr 1fr 1fr;
-          grid-template-columns: 1fr 1fr 1fr;
-      grid-row-gap: 10px;
-      grid-column-gap: 10px;
-      height: 100vh;
-      margin: 0;
-    }
-  }
-  /*# sourceMappingURL=estilos.css.map */
+}
+/*# sourceMappingURL=estilos.css.map */

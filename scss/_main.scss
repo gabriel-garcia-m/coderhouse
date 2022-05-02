@@ -6,8 +6,8 @@
       "footer footer footer";
     grid-template-rows: 100px 1fr 75px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
+    grid-row-gap: map-get($mapaDeEstilos, tam10Px);
+    grid-column-gap: map-get($mapaDeEstilos, tam10Px);
     height: 100vh;
     margin: 0;
   }
@@ -24,7 +24,7 @@
   }
   section#historia {
     grid-area: historia;
-    text-align: center;
+    text-align: map-get($mapaDeEstilos, alinCentro);
     /*background-image: url("../img/history.jpg");*/
     background-image: linear-gradient(
       to left,
@@ -34,7 +34,7 @@
   }
   section#noticias {
     grid-area: noticias;
-    text-align: center;
+    text-align: map-get($mapaDeEstilos, alinCentro);
     background-image: url("../img/news.jpg");
   }
   nav {
@@ -45,13 +45,13 @@
       display: inline-flex;
       margin: 0%;
       li {
-        padding: 10px;
+        padding: map-get($mapaDeEstilos, tam10Px);
       }
       }
   }
   aside {
     grid-area: telescopio;
-    text-align: center;
+    text-align: map-get($mapaDeEstilos, alinCentro);
     background-image: url("../img/jw.jpg");
   }
   
@@ -93,8 +93,8 @@
       "footer footer footer";
     grid-template-rows: 100px 1fr 75px;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
+    grid-row-gap: map-get($mapaDeEstilos, tam10Px);
+    grid-column-gap: map-get($mapaDeEstilos, tam10Px);
     height: 100vh;
     margin: 0;
   }
@@ -106,7 +106,7 @@
   
   section#historiaContenido {
     grid-area: historia;
-    text-align: center;
+    text-align: map-get($mapaDeEstilos, alinCentro);
   }
   
 

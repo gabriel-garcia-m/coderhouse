@@ -1,11 +1,20 @@
+$mapaDeEstilos:(
+valorCero: 0,
+boxS: border-box,
+tam10Px: 10px,
+alinCentro: center
+);
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: map-get($mapaDeEstilos,valorCero);
+    padding: map-get($mapaDeEstilos,valorCero);
+    box-sizing: map-get($mapaDeEstilos, boxS);
   }
+
 $bordercolor: lightgray;
 $familiafuente: Roboto;
+
+
 
 @import "header";
 @import "main";

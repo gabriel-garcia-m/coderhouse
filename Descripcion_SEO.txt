@@ -1,0 +1,14 @@
+Mejora de SEO para sitio.
+
+Realicé cambios a:
+
+- Títulos:
+-- Coloqué una mejor descripción del Título
+-- Coloqué un título para cada ágina, indicando contenido
+
+- Keywords:
+-- Añadí palabras clave, relacionadas con el contenido del sitio, tales como:
+--- Space, exploration, exploración, espacial, espacio, luna, sol, moon, sun...
+
+- Description:
+-- Mejoré la descripción del sitio, explicando cierto contenido, tal como: "Este es un sitio con noticias y contenido acerca de la exploración espacial"
