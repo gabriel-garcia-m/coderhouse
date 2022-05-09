@@ -1,50 +1,99 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Este es un sitio con noticias y contenido acerca de la exploración espacial">
-    <meta name="keywords" content="espacio, exploración, sol, luna, sistema solar, cohete, nave espacial, sonda, astronauta, NASA, estación espacial internacional, space, exploration, historia, noticias, telescopio, moon, sun, stars, estrellas">
-    <!--Realizo conexion para fuentes-Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!--Mando llamar hoja de estilos-->
-    <link rel="stylesheet" href="css/estilos.css" />
-    <title>OFTW-Telescopio James Webb</title>
-  </head>
-  <body>
-    <main>
-      <div id="grillaContenido">
-        <header class="border">
-          <h1 class="animate__animated animate__bounce">
-            <a href="index.html"
-              >Out of this WORLD.......{exploración espacial}</a
-            >
-          </h1>
-        </header>
-        <section id="historiaContenido" class="border">
-          <h2 class="h2_principal">Ver Telescopio James Webb</h2>
-          <iframe width="350" height="300" src="https://www.youtube.com/embed/7nT7JGZMbtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Este es un sitio con noticias y contenido acerca de la exploración espacial">
+  <meta name="keywords"
+    content="espacio, exploración, sol, luna, sistema solar, cohete, nave espacial, sonda, astronauta, NASA, estación espacial internacional, space, exploration, historia, noticias, telescopio, moon, sun, stars, estrellas">
+  <!--Realizo conexion para fuentes-Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <!--Mando llamar hojas de estilos para animaciones-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!--Mando llamar hojas de estilos-->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <!--Mando llamar hojas de estilos de Bootstrap v5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--Mando llamar hojas de estilos para iconos en Bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!--Mando llamar mis hojas de estilos-->
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <title>OFTW-Telescopio James Webb</title>
+</head>
 
-        <nav class="border">
-          <ul>
-            <li><a href="historia.html">Historia</a></li>
-            <br />
-            <li><a href="noticias.html">Noticias</a></li>
-            <br />
-            <li><a href="telescopio.html">Telescopio James Web</a>b</li>
+<body>
+  <header class="container-fluid border border-light bg-secondary bg-opacity-50" id="arriba">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid" style="border: 20%;">
+        <a class="navbar-brand  text-wrap" href="index.html" aria-current="true">
+          <img src="img/logo.png" alt="logo_space" width="70" height="50" />
+          OFTW
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-bold" aria-current="page" href="historia.html">Historia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" aria-current="page" href="noticias.html">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" aria-current="page" href="telescopio.html">Telescopio James Webb</a>
+            </li>
           </ul>
-        </nav>
-
-        <footer class="border"><img alt="tt" src="img/sm.jpg" /></footer>
+        </div>
       </div>
-    </main>
-  </body>
+    </nav>
+  </header>
+  <main class="container-fluid">
+    <div class="row border border-light ">
+      <div class="col-12 col-md-12 col-lg-6 p-5 pt-0 pb-0 border bg-warning bg-gradient bg-opacity-75">
+        <p class="text-justify">
+        <h2 class="h2_principal">
+          Telescopio James Webb
+        </h2>
+    
+        <br>
+        El Telescopio Espacial James Webb es el más grande, poderoso y complejo jamás construido. Webb resolverá
+        misterios de nuestro sistema solar, mirará más allá de mundos distantes alrededor de otras estrellas, y
+        averiguará las misteriosas estructuras y orígenes de nuestro universo y nuestro lugar en el mismo. Webb es
+        un programa internacional liderado por la NASA y sus socios, ESA (Agencia Europea Espacial) y la Agencia
+        Espacial Canadiense.
+
+        -- <a href="https://blogs.nasa.gov/webb//" target="_blank">[Fuente: NASA]</a>
+
+        </p>
+
+      </div>
+      <div class="col-12 col-md-12 col-lg-6 p-5 pt-5 pt-0 border bg-warning bg-gradient bg-opacity-75 ">
+       
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/pBEIcJiD6xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
+
+      <div class="col-12 border bg-secondary bg-opacity-50 p-3 d-flex justify-content-center">
+
+        <a href="https://twitter.com/gabrielgarciam" target="_blank"><i class="bi bi-twitter">Contacto </i></a>
+        <a href="#arriba">-<i class="bi bi-arrow-up-circle-fill">Ir arriba</i></a>
+
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>

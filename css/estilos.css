@@ -120,17 +120,18 @@ a {
 }
 
 a:focus {
-  background-color: #a5a1a1;
+  background-color: #a5a4a1;
+}
+
+a:hover {
+  color: #2b2929;
 }
 
 .h2_principal {
-  /*animaciones al texto h2*/
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-name: showw;
-          animation-name: showw;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  /*animaciones al texto h2
+    animation-duration: 2s;
+    animation-name: showw;
+    animation-iteration-count: infinite;*/
 }
 
 #grillaContenido {

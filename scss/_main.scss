@@ -64,7 +64,10 @@
     color: black;
     font-size: smaller;
     &:focus {
-      background-color: rgb(165, 161, 161);
+      background-color: rgb(165, 164, 161);
+    }
+    &:hover {
+      color: rgb(43, 41, 41);
     }
   }
   
@@ -72,10 +75,10 @@
   
   .h2_principal {
     @extend .formatoH2;
-    /*animaciones al texto h2*/
+    /*animaciones al texto h2
     animation-duration: 2s;
     animation-name: showw;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/
   }
 
   #grillaContenido {

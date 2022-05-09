@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Este es un sitio con noticias y contenido acerca de la exploración espacial">
-  <meta name="keywords" content="espacio, exploración, sol, luna, sistema solar, cohete, nave espacial, sonda, astronauta, NASA, estación espacial internacional, space, exploration, historia, noticias, telescopio, moon, sun, stars, estrellas">
+  <meta name="keywords"
+    content="espacio, exploración, sol, luna, sistema solar, cohete, nave espacial, sonda, astronauta, NASA, estación espacial internacional, space, exploration, historia, noticias, telescopio, moon, sun, stars, estrellas">
   <!--Realizo conexion para fuentes-Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,7 +31,7 @@
 </head>
 
 <body>
-  <header class="container-fluid border border-light bg-secondary bg-opacity-50">
+  <header class="container-fluid border border-light bg-secondary bg-opacity-50" id="arriba">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid" style="border: 20%;">
         <a class="navbar-brand fs-1 text-wrap" href="index.html" aria-current="true">
@@ -53,60 +54,68 @@
       </div>
     </nav>
   </header>
-  <main class="container-fluid">
-    <div class="row justify-content-center border border-light">
+  <main class="container-fluid" >
+    <div class="row justify-content-center ">
       <div class="col-12 col-sd-6 col-lg-4 p-3 pt-0 pb-0 border bg-warning bg-gradient bg-opacity-75">
-<a href="historia.html">
-        <p>
-        <h2 class="h2_principal">
-          Historia de la exploración espacial
-        </h2>
-        El Universo siempre ha fascinado a los seres humanos, que desde la Antigüedad soñaban con alcanzar mundos
-        diferentes al suyo. Algunos escritores y cineastas del siglo XIX y principios del XX como Julio Verne y George
-        Méliès abordaron el tema de la exploración espacial, pero no fue hasta mediados del siglo XX que este sueño se
-        materializó. Fuente: <a href="https://www.geoenciclopedia.com/exploracion-espacial/"
-          target="_blank">GeoEnciclopedia</a>
-        <br></a>
+        <a href="historia.html">
+          <p>
+            <h2 class="h2_principal">
+              Historia de la exploración espacial
+            </h2>
+            El Universo siempre ha fascinado a los seres humanos, que desde la Antigüedad soñaban con alcanzar mundos
+            diferentes al suyo. Algunos escritores y cineastas del siglo XIX y principios del XX como Julio Verne y
+            George
+            Méliès abordaron el tema de la exploración espacial, pero no fue hasta mediados del siglo XX que este sueño
+            se
+            materializó.
+        </a> -- <a href="https://www.geoenciclopedia.com/exploracion-espacial/" target="_blank"> [Fuente:
+          GeoEnciclopedia]</a>
 
+        <img src="img/space_eploration.jpg" class="img-fluid rounded" alt="">
 
         </p>
       </div>
       <div class="col-12 col-lg-4 p-3 pt-0 pb-0 border bg-warning bg-gradient bg-opacity-75">
-        <a href="historia.html">
-        <p>
-        <h2 class="h2_principal">
-          Noticias
-        </h2>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit dolorum libero ea culpa tempora. Voluptatum
-        totam laborum voluptas alias deleniti.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, et fuga accusantium quod officiis ad,
-        totam architecto pariatur consectetur ducimus minima sunt consequuntur nesciunt quo? Doloremque aut laboriosam
-        vero cupiditate!
-        </p></a>
+        <a href="noticias.html">
+          <p>
+            <h2 class="h2_principal">
+              Noticias
+            </h2>
+            <h6>Luna de sangre en mayo de 2022: ¿cómo verla?</h6>
+            En mayo de 2022 esperamos un glorioso espectáculo celestial: el eclipse lunar total se verá desde las
+            Américas, África y una parte de Eurasia.<br><br>
+            <h6>¿A qué hora es el eclipse lunar en mayo de 2022?</h6>
+
+            La fase completa del eclipse lunar total comenzará el 16 de mayo, a las 03:30 GMT, cuando la sombra de la
+            Tierra cubra completamente la Luna.        </a> -- <a href="https://starwalk.space/es/news/total-lunar-eclipse-may-2022/" target="_blank"> [Fuente:
+              Starwalk]</a>
+            <img src="img/luna_sangre.jpg" class="img-fluid rounded" alt="blood_moon">
+          </p>
+        </a>
       </div>
       <div class="col-12 col-lg-4 p-3 pt-0 pb-0 border bg-warning bg-gradient  bg-gradient bg-opacity-75">
-        <a href="historia.html">
-        <p>
-        <h2 class="h2_principal">
-          Telescopio espacial James Webb
-        </h2>The James Webb Space Telescope is the world’s largest, most powerful, and most complex space science
-        telescope ever built. Webb will solve mysteries in our solar system, look beyond to distant worlds around other
-        stars, and probe the mysterious structures and origins of our universe and our place in it. Webb is an
-        international program led by NASA with its partners, ESA (European Space Agency) and the Canadian Space Agency.
-        Fuente: <a href="https://blogs.nasa.gov/webb/" target="_blank">James Webb Space Telescope</a>
-        <br>
-      </a>
-        <a href="https://blogs.nasa.gov/webb/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-            fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-          </svg> Ver más</a></p>
+        <a href="telescopio.html">
+          <p>
+            <h2 class="h2_principal">
+              Telescopio espacial James Webb
+            </h2>
+
+            El Telescopio Espacial James Webb es el más grande, poderoso y complejo jamás construido. Webb resolverá
+            misterios de nuestro sistema solar, mirará más allá de mundos distantes alrededor de otras estrellas, y
+            averiguará las misteriosas estructuras y orígenes de nuestro universo y nuestro lugar en el mismo. Webb es
+            un programa internacional liderado por la NASA y sus socios, ESA (Agencia Europea Espacial) y la Agencia
+            Espacial Canadiense. --
+            [Fuente: <a href="https://blogs.nasa.gov/webb/" target="_blank">James Webb Space Telescope]</a>
+
+        </a>
+        <img src="img/james-webb-space-telescope.jpg" class="img-fluid rounded" alt="">
 
 
       </div>
-      <div class="col-12 border bg-secondary bg-opacity-50">
+      <div class="col-12 border bg-secondary bg-opacity-50 p-3 d-flex justify-content-center">
 
-        <a href="https://twitter.com/gabrielgarciam" target="_blank"><i class="bi bi-twitter">Contacto</i></a>
+        <a href="https://twitter.com/gabrielgarciam" target="_blank"><i class="bi bi-twitter">Contacto </i></a>
+        <a href="#arriba">-<i class="bi bi-arrow-up-circle-fill">Ir arriba</i></a>
 
       </div>
     </div>
