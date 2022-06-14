@@ -11,7 +11,7 @@ function ejecuta() {
       break;
 
     case 2:
-      consultaHistorico(
+      obtieneTemp(
         parseInt(
           prompt(
             "Ingresa cualquier de estos años: 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012:"
@@ -45,105 +45,105 @@ function promedioCDMX() {
   );
 }
 
-//Para usar con arrays
-// function validaAnio(anio) {
-//   for (const recorreAnio of aniosArreglo) {
-//     if (recorreAnio.id.includes(anio)) {
-//       alert("test " + recorreAnio.id);
-//       return true;
-//     }
-//   }
-// }
-
-// function obtieneTemp(anio) {}
-
-function consultaHistorico(anio) {
-  switch (anio) {
-    case 2021:
-      alert(
-        "La temperatura promedio para el año " +
-          anio +
-          " fue de: 23 grados centígrados"
-      );
-      break;
-
-    case 2020:
-      alert(
-        "La temperatura promedio para el año " +
-          anio +
-          " fue de: 22 grados centígrados"
-      );
-      break;
-
-    case 2019:
-      alert(
-        "La temperatura promedio para el año " +
-          anio +
-          " fue de: 21 grados centígrados"
-      );
-      break;
-
-    case 2018:
-      alert(
-        "La temperatura promedio  para el año " +
-          anio +
-          " fue de: 21.5 grados centígrados"
-      );
-      break;
-
-    case 2017:
-      alert(
-        "La temperatura promedio para el año " +
-          anio +
-          " fue de: 21.4 grados centígrados"
-      );
-      break;
-
-    case 2016:
-      alert(
-        "La temperatura promedio para el año " +
-          anio +
-          " fue de: 21.3 grados centígrados"
-      );
-      break;
-
-    case 2015:
-      alert(
-        "La temperatura promedio para el año " +
-          anio +
-          " fue de: 21.2 grados centígrados"
-      );
-      break;
-
-    case 2014:
-      alert(
-        "La temperatura promedio para el año " +
-          anio +
-          " fue de: 21.1 grados centígrados"
-      );
-      break;
-
-    case 2013:
-      alert(
-        "La temperatura promedio para el año " +
-          anio +
-          " fue de: 20.5 grados centígrados"
-      );
-      break;
-
-    case 2012:
-      alert(
-        "La temperatura promedio para el año " +
-          anio +
-          " fue de: 20 grados centígrados"
-      );
-      break;
-
-    default:
-      alert(
-        "Valor incorrecto, solo puedes ingresar años entre 2021 y 2012. Intenta de nuevo..."
-      );
-      ejecuta();
-      break;
+function obtieneTemp(anio) {
+  const resultado = aniosArreglo.find((tem) => tem.anio === anio);
+  if (resultado == undefined) {
+    alert(
+      "Valor incorrecto, solo puedes ingresar años entre 2021 y 2012. Intenta de nuevo..."
+    );
+    ejecuta();
+  } else {
+    alert(resultado.temperatura);
   }
 }
+
+// function consultaHistorico(anio) {
+//   switch (anio) {
+//     case 2021:
+//       alert(
+//         "La temperatura promedio para el año " +
+//           anio +
+//           " fue de: 23 grados centígrados"
+//       );
+//       break;
+
+//     case 2020:
+//       alert(
+//         "La temperatura promedio para el año " +
+//           anio +
+//           " fue de: 22 grados centígrados"
+//       );
+//       break;
+
+//     case 2019:
+//       alert(
+//         "La temperatura promedio para el año " +
+//           anio +
+//           " fue de: 21 grados centígrados"
+//       );
+//       break;
+
+//     case 2018:
+//       alert(
+//         "La temperatura promedio  para el año " +
+//           anio +
+//           " fue de: 21.5 grados centígrados"
+//       );
+//       break;
+
+//     case 2017:
+//       alert(
+//         "La temperatura promedio para el año " +
+//           anio +
+//           " fue de: 21.4 grados centígrados"
+//       );
+//       break;
+
+//     case 2016:
+//       alert(
+//         "La temperatura promedio para el año " +
+//           anio +
+//           " fue de: 21.3 grados centígrados"
+//       );
+//       break;
+
+//     case 2015:
+//       alert(
+//         "La temperatura promedio para el año " +
+//           anio +
+//           " fue de: 21.2 grados centígrados"
+//       );
+//       break;
+
+//     case 2014:
+//       alert(
+//         "La temperatura promedio para el año " +
+//           anio +
+//           " fue de: 21.1 grados centígrados"
+//       );
+//       break;
+
+//     case 2013:
+//       alert(
+//         "La temperatura promedio para el año " +
+//           anio +
+//           " fue de: 20.5 grados centígrados"
+//       );
+//       break;
+
+//     case 2012:
+//       alert(
+//         "La temperatura promedio para el año " +
+//           anio +
+//           " fue de: 20 grados centígrados"
+//       );
+//       break;
+
+//     default:
+//       alert(
+//         "Valor incorrecto, solo puedes ingresar años entre 2021 y 2012. Intenta de nuevo..."
+//       );
+//       ejecuta();
+//       break;
+//   }
+// }
