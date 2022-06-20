@@ -73,7 +73,8 @@
     <div class="row border border-light ">
       <div class="col-12 col-md-12 col-lg-6 p-5 pt-0 pb-0 border bg-warning bg-gradient bg-opacity-75">
         <p class="text-justify">
-        <h2 class="h2_principal">
+        <h2 id="bienvenida" class="h2_principal">
+          
           Calculadora Meteorológica [version BETA - JavaScript CoderHouse]
         </h2>
 
@@ -87,11 +88,16 @@
             Calcular temperatura promedio para los siguientes cinco años en Ciudad de México, México.</li>
           <li>
             Consultar histórico de temperatura promedio de los últimos diez años en Ciudad de México, México.</li>
+            <li>
+              Realizar conversiones de grados Celcius a Fahrenheit y viceversa.</li>
         </ol>
-        <br>
-        En esta primera versión los resultados se mostrarán en la consola y el ingreso de datos por parte del usuario serán a través de un prompt sencillo de Javascript.
+        
+        En esta versión los resultados se mostrarán a continuación (implementado modificaciones al DOM).
+      
+        <p id = 'contenido'>
+          
         </p>
-
+        </p>
       </div>
       <div class="col-12 col-md-12 col-lg-6 p-5 pt-5 pt-0 border bg-warning bg-gradient bg-opacity-75 ">
 
@@ -111,6 +117,7 @@
       </div>
     </div>
     <script src="js/variables.js" defer></script>
+    <script src="js/modificaDom.js" defer></script>
     <script src="js/funciones.js" defer></script>
     <script src="js/calculadoraM.js" defer></script>
    

@@ -57,12 +57,20 @@ function promedioCDMX() {
   let anio3 = parseFloat(prompt("Ingresa valor para año 2025"));
   let anio4 = parseFloat(prompt("Ingresa valor para año 2026"));
   let anio5 = parseFloat(prompt("Ingresa valor para año 2027"));
-  alert(
-    "El promedio para los siguientes cinco años en Ciudad de México es: " +
-      (anio1 + anio2 + anio3 + anio4 + anio5) / 5 +
-      " grados centígrados."
-  );
-  ejecuta()
+  // alert(
+  //   "El promedio para los siguientes cinco años en Ciudad de México es: " +
+  //     (anio1 + anio2 + anio3 + anio4 + anio5) / 5 +
+  //     " grados centígrados."
+  // );
+
+  //Modificacion dinamica de DOM
+  let despliegaRes = document.getElementById("contenido");
+  despliegaRes.innerHTML =
+    "<strong>Resultados</strong><div> El promedio para los siguientes cinco años en Ciudad de México es de: <strong>" +
+    (anio1 + anio2 + anio3 + anio4 + anio5) / 5 +
+    "</strong> grados centígrados. </div>";
+
+  // ejecuta()
 }
 
 //Función para obtener temperatura histórica, utilizando funciones de orden superior y arreglo de objetos
@@ -74,8 +82,15 @@ function obtieneTemp(anio) {
     );
     ejecuta();
   } else {
-    alert("La temperatura en el año " + anio+ " fue de " + resultado.temperatura + " grados Celcius");
-    ejecuta()
+    let despliegaRes = document.getElementById("contenido");
+    despliegaRes.innerHTML =
+      "<strong>Resultados</strong> <table class='table border'> <thead class='border'> <tr> <th scope='col'>Año</th> <th scope='col'>Temperatura promedio</th> </tr></thead><tbody><tr><th scope='row'>" +
+      anio +
+      "</th><td>" +
+      resultado.temperatura +
+      " grados Celcius</td></tr></tbody></table>";
+    // alert("La temperatura en el año " + anio+ " fue de " + resultado.temperatura + " grados Celcius");
+    // ejecuta()
   }
 }
 
@@ -176,13 +191,20 @@ function celciusFahrenheit(temperatura) {
     alert("Ingresa un número...");
     ejecuta();
   } else {
-    alert(
+    // alert(
+    //   temperatura +
+    //     " grados Celcius a Fahrenheit son: " +
+    //     (temperatura * 1.8 + 32).toFixed(2) +
+    //     " grados"
+    // );
+    // ejecuta();
+    let despliegaRes = document.getElementById("contenido");
+    despliegaRes.innerHTML =
+      "<strong>Resultados</strong> <table class='table border'> <thead class='border'> <tr> <th scope='col'>Valor ingresado (Celcius)</th> <th scope='col'>Conversión a Fahrenheit</th> </tr></thead><tbody><tr><th scope='row'>" +
       temperatura +
-        " grados Celcius a Fahrenheit son: " +
-        (temperatura * 1.8 + 32).toFixed(2) +
-        " grados"
-    );
-    ejecuta();
+      "</th><td>" +
+      (temperatura * 1.8 + 32).toFixed(2) +
+      " grados </td></tr></tbody></table>";
   }
 }
 
@@ -192,12 +214,19 @@ function fahrenheitCelcius(temperatura) {
     alert("Ingresa un número...");
     ejecuta();
   } else {
-    alert(
+    // alert(
+    //   temperatura +
+    //     " grados Fahrenheit a Celcius son: " +
+    //     ((temperatura - 32) / 1.8).toFixed(2) +
+    //     " grados"
+    // );
+    // ejecuta();
+    let despliegaRes = document.getElementById("contenido");
+    despliegaRes.innerHTML =
+      "<strong>Resultados</strong> <table class='table border'> <thead class='border'> <tr> <th scope='col'>Valor ingresado (Fahrenheit)</th> <th scope='col'>Conversión a Celcius</th> </tr></thead><tbody><tr><th scope='row'>" +
       temperatura +
-        " grados Fahrenheit a Celcius son: " +
-        ((temperatura - 32) / 1.8).toFixed(2) +
-        " grados"
-    );
-    ejecuta();
+      "</th><td>" +
+      ((temperatura - 32) / 1.8).toFixed(2) +
+      " grados </td></tr></tbody></table>";
   }
 }
