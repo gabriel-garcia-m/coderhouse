@@ -1,53 +1,74 @@
 //Función principal que controla flujo
 function ejecuta() {
-  let seleccionOp = parseInt(
-    prompt(
-      "Seleccionar opciones: \n Ingresa 1: Calcula promedio para los siguientes cinco años (CDMX, México) \n Ingresa 2: Consulta histórico de últimos diez años (CDMX, México) \n Ingresa 3: Convierte grados Celcius a Fahrenheit \n Ingresa 4: Convierte grados Fahrenheit a Celcius \n Ingresa 5 para salir"
+
+  //Manejo de eventos
+  let btnPromedio = document.getElementById('btnprom')
+  btnPromedio.onclick = () => {promedioCDMX()}
+
+  let btnConsulta = document.getElementById('btnhist')
+  btnConsulta.onclick = () => { obtieneTemp(parseInt(prompt("Ingresa cualquier de estos años: 2021, 2020, 2019, 2018, 2017, 2016, 2015,2014, 2013, 2012:")))}
+
+  let btnCelcius = document.getElementById('btncelcius')
+  btnCelcius.onclick = () => {     celciusFahrenheit(
+    parseFloat(
+      prompt("Convierte grados Celcius a Fahrenheit - ingresa valor:")
     )
-  );
+  )}
 
-  switch (seleccionOp) {
-    case 1:
-      promedioCDMX();
-      break;
+  let btnFah = document.getElementById('btnfahrenheit')
+  btnFah.onclick = () => {     fahrenheitCelcius(
+    parseFloat(
+      prompt("Convierte grados Fahrenheit a Celcius - ingresa valor:")
+    )
+  );}
+  // let seleccionOp = parseInt(
+  //   prompt(
+  //     "Seleccionar opciones: \n Ingresa 1: Calcula promedio para los siguientes cinco años (CDMX, México) \n Ingresa 2: Consulta histórico de últimos diez años (CDMX, México) \n Ingresa 3: Convierte grados Celcius a Fahrenheit \n Ingresa 4: Convierte grados Fahrenheit a Celcius \n Ingresa 5 para salir"
+  //   )
+  // );
 
-    case 2:
-      obtieneTemp(
-        parseInt(
-          prompt(
-            "Ingresa cualquier de estos años: 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012:"
-          )
-        )
-      );
-      break;
+  // switch (seleccionOp) {
+  //   case 1:
+  //     promedioCDMX();
+  //     break;
 
-    case 3:
-      celciusFahrenheit(
-        parseFloat(
-          prompt("Convierte grados Celcius a Fahrenheit - ingresa valor:")
-        )
-      );
-      break;
+  //   case 2:
+  //     obtieneTemp(
+  //       parseInt(
+  //         prompt(
+  //           "Ingresa cualquier de estos años: 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012:"
+  //         )
+  //       )
+  //     );
+  //     break;
 
-    case 4:
-      fahrenheitCelcius(
-        parseFloat(
-          prompt("Convierte grados Fahrenheit a Celcius - ingresa valor:")
-        )
-      );
+  //   case 3:
+      // celciusFahrenheit(
+      //   parseFloat(
+      //     prompt("Convierte grados Celcius a Fahrenheit - ingresa valor:")
+      //   )
+      // );
+  //     break;
 
-      break;
+  //   case 4:
+      // fahrenheitCelcius(
+      //   parseFloat(
+      //     prompt("Convierte grados Fahrenheit a Celcius - ingresa valor:")
+      //   )
+      // );
 
-    case 5:
-      break;
+  //     break;
 
-    default:
-      alert(
-        "Valor incorrecto, solo puedes ingresar 1, 2, 3, 4 o 5. Intenta de nuevo..."
-      );
-      ejecuta();
-      break;
-  }
+  //   case 5:
+  //     break;
+
+  //   default:
+  //     alert(
+  //       "Valor incorrecto, solo puedes ingresar 1, 2, 3, 4 o 5. Intenta de nuevo..."
+  //     );
+  //     ejecuta();
+  //     break;
+  // }
 }
 
 //Función para calcular promedio
