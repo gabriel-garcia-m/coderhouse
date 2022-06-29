@@ -79,11 +79,35 @@
         </h2>
 
         <br>
+        <i class="bi bi-calculator-fill"></i>
         En esta sección podrás realizar cálculos meteorológicos.
+        <i class="bi bi-calculator-fill"></i><br><br>
 
-        Los primeros que puedes hacer son:
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Descripción</th>
+              <th>Ejecuta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Calcular temperatura promedio para los siguientes cinco años en Ciudad de México, México.</td>
+              <td><button id="btnprom" type="button" class="btn btn-dark">Calcula promedio</button></td>
+            </tr>
+            <tr>
+              <td>Consultar histórico de temperatura promedio de los últimos diez años en Ciudad de México, México.</td>
+              <td><button id="btnhist" type="button" class="btn btn-dark">Consulta histórico</button></td>
+            </tr>
+            <tr>
+              <td>Realizar conversiones de grados Celcius a Fahrenheit y viceversa.</td>
+              <td>             <button id="btncelcius" type="button" class="btn btn-dark">Convierte Celcius a Fahrenheit</button>
+                <button id="btnfahrenheit" type="button" class="btn btn-dark">Convierte Fahrenheit a Celcius</button></td>
+            </tr>
+          </tbody>
 
-        <ol>
+        </table>
+        <!-- <ol>
           <li>
             Calcular temperatura promedio para los siguientes cinco años en Ciudad de México, México.
             <button id="btnprom" type="button" class="btn btn-dark">Calcula promedio</button>
@@ -99,7 +123,8 @@
               <button id="btncelcius" type="button" class="btn btn-dark">Convierte Celcius a Fahrenheit</button>
               <button id="btnfahrenheit" type="button" class="btn btn-dark">Convierte Fahrenheit a Celcius</button>
             </li>
-        </ol>
+        </ol> -->
+        
         
         En esta versión los resultados se mostrarán a continuación (implementado modificaciones al DOM):
       
@@ -128,6 +153,7 @@
     <script src="js/variables.js" defer></script>
     <script src="js/modificaDom.js" defer></script>
     <script src="js/funciones.js" defer></script>
+    <script src="js/objetos.js" defer></script>
     <script src="js/calculadoraM.js" defer></script>
    
   </main>
