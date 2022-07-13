@@ -21,4 +21,6 @@ const cargaAniosTemp = () => {
 
 let valAnuales = []
 
+const urlClima = "http://api.weatherapi.com/v1/current.json?key=fe08f91606de43a1a91231538221207&q=Mexico city&aqi=yes"
+
 

@@ -371,3 +371,18 @@ function descomponeArreglo(){
   mensajeTostada(mensajeT,5000)
   
 }
+
+//FETCH a API real (WatherAPI)
+function obtieneClimaCDMX(){
+  const contenidoClima = document.querySelector('#muestraclima')
+
+fetch(urlClima)
+    .then( (resp) => resp.json() )
+    .then( (data) => {
+
+        contenidoClima.innerHTML = `<tr><td>${data.location.name}</td><td>${data.location.country}</td><td>${data.current.temp_c}</td><td>${data.current.condition.text}</td><td><img src="${data.current.condition.icon}"></img></td></tr> `
+        })
+        .catch((error)=> contenidoClima.innerHTML =  `<tr><td>No hay información disponible por el momento</td></tr>`)
+        .finally(()=> console.log("Fin de ejecución"))
+
+}

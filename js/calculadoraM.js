@@ -1,2 +1,4 @@
 ejecuta() 
+obtieneClimaCDMX()
+
 
